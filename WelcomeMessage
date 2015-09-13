@@ -1,1 +1,1 @@
-sudo ./pifm Sounds/Welcome\ Message.wav 88.0 36050
+sudo ./pyfm Sounds/Welcome\ Message.wav 88.0 36050

@@ -1,11 +1,10 @@
 #!/usr/bin/python
 
 from subprocess import call
+import os
 
-def play_old( filename ):
-   call(["./pifm ", filename, "88.0", "88307"])
-   return
+def play(filename):
+   os.system("sudo ./pyfm " + filename + " 88.0 " + " 46485" + " stereo")
 
 def play_message():
-	call(["./WelcomeMessage"])
-	return 
+	os.system("./WelcomeMessage")
