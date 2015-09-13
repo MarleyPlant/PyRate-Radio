@@ -2,8 +2,8 @@
 
 from subprocess import call
 
-def play( filename ):
-   call(["./pifm", filename, "88.0", "88307"])
+def play_old( filename ):
+   call(["./pifm ", filename, "88.0", "88307"])
    return
 
 def play_message():
