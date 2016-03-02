@@ -15,7 +15,7 @@ def stop(stop):
 
 def play(selected):
 	print(str(songs_path[selected]))
-	player = call("./PiFm " + str(songs_path[selected]) + " 103.3 22050 stereo")
+	player = os.system("./pifm " + str(songs_path[selected]) + " 103.3 22050 stereo")
 
 def listSongs():
 	i = 0
