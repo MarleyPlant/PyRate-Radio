@@ -20,5 +20,6 @@ print("|--------------------------------|")
 radio.refreshFiles()
 radio.listSongs()
 
-picksong()
-radio.play(selected)
+while True:
+	picksong()
+	radio.play(selected)

@@ -1,20 +1,21 @@
 import glob
-import subprocess
+from subprocess import call
 import os
 songs = [""]
 songs_path = [""]
 def refreshFiles():
 	os.chdir("Music")
 	for file in glob.glob("*.wav"):
-		songs_path.append("Music/" + file)
+		songs_path.append(os.path.realpath(file))
 		songs.append(file)
+	os.chdir("..")
 
 def stop(stop):
 	player.kill()
 
 def play(selected):
-	print(songs_path[selected])
-	player = subprocess.call("./pyfm " + str(songs_path[selected]) + " 103.3 22050 stereo")
+	print(str(songs_path[selected]))
+	player = call("./PiFm " + str(songs_path[selected]) + " 103.3 22050 stereo")
 
 def listSongs():
 	i = 0
