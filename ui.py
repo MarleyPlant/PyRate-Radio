@@ -1,6 +1,8 @@
 import os
 import sys
-import radio
+import lib.radio as radio
+
+antenna = radio.antenna(103.3, True)
 
 selected = ""
 
@@ -9,7 +11,7 @@ def clear():
 
 def picksong():
 	global selected
-	selected = raw_input("Song To Play: ")
+	selected = input("Song To Play: ")
 	selected = int(selected)
 
 clear()
@@ -17,9 +19,9 @@ print("|--------------------------------|")
 print("|===========PyRate Radio=========|")
 print("|=====http://marleyplant.com=====|")
 print("|--------------------------------|")
-radio.refreshFiles()
-radio.listSongs()
+antenna.loadFiles()
+antenna.list()
 
 while True:
 	picksong()
-	radio.play(selected)
+	antenna.play(selected)
