@@ -21,7 +21,7 @@ class antenna:
 		player.kill()
 
 	def play(self, selected):
-		player = os.system("./lib/pifm " + str(self.songs_path[selected]) + " 103.3 22050 stereo")
+		player = os.system("./lib/pifm " + str(self.songs_path[selected]) + " " + str(self.frequency) + " 22050 stereo")
 
 	def list(self):
 		i = 0
